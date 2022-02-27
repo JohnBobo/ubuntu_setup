@@ -25,6 +25,19 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ```
 
+### Get more packages available.
+```
+sudo add-apt-repository ppa:aslatter/ppa
+```
+
+### Fix tmux
+```
+cd
+git clone https://github.com/gpakosz/.tmux.git
+ln -s -f .tmux/.tmux.conf
+cp .tmux/.tmux.conf.local .
+```
+
 ### Install github CLI.
 ```
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
@@ -32,5 +45,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 sudo apt update
 sudo apt install gh
 ```
+
+
 
 
